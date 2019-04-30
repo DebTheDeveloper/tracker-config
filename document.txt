@@ -1,0 +1,138 @@
+https://wipro-waveland.education.pivotal.io
+
+Admin Uid: .\imgadmin
+Password: wipro@123
+
+Wipro PCF endPoint(Private): https://api.system.dev.pcf-aws.com
+
+cohortIdentifier : cnd-batch3-pdc-april-22
+Proxy: lc-proxy.wipro.com
+
+GitHub Uid: DebTheDeveloper
+
+cf set-env pal-tracker JBP_CONFIG_OPEN_JDK_JRE "{ jre: { version: 11.+ } }"
+
+curl -i -XDELETE -H"Content-Type: application/json" localhost:8080/time-entries/3
+
+set HTTPS_PROXY=http://DE20076590:May%402019@proxy2.wipro.com:8080
+set HTTP_PROXY=http://DE20076590:May%402019@proxy2.wipro.com:8080
+
+api.run.pivotal.io
+
+curl -i -XPOST -H"Content-Type: application/json" https://pal-tracker-debajyoti.cfapps.io/time-entries -d"{\"projectId\": 1, \"userId\": 2, \"date\": \"2019-01-01\", \"hours\": 8}"
+curl -i localhost:8080/time-entries/${TIME_ENTRY_ID}
+curl -i -XPUT -H"Content-Type: application/json" localhost:8080/time-entries/${TIME_ENTRY_ID} -d"{\"projectId\": 88, \"userId\": 99, \"date\": \"2019-01-01\", \"hours\": 8}"
+curl -i -XDELETE -H"Content-Type: application/json" localhost:8080/time-entries/${TIME_ENTRY_ID}
+curl -i https://pal-tracker-debajyoti.cfapps.io/time-entries
+
+netstat -ano | findstr :8761
+taskkill /PID 55708 /F
+
+gradle platform-services:eureka-server:bootRun
+
+cf unset-env tracker-allocations-debajyoti REGISTRATION_SERVER_ENDPOINT
+cf unset-env tracker-backlog-debajyoti REGISTRATION_SERVER_ENDPOINT
+cf unset-env tracker-timesheets-debajyoti REGISTRATION_SERVER_ENDPOINT
+
+https://backlog-pal-debajyoti.apps.dev.pcf-aws.com/health
+
+curl -i -XPOST -H"Content-Type: application/json" localhost:8083/projects -d"{\"name\": \"Project A\", \"accountId\": \"1\"}"
+curl -i -XPOST -H"Content-Type: application/json" localhost:8083/projects -d"{\"name\": \"Project B\", \"accountId\": \"1\"}"
+curl -i -XPOST -H"Content-Type: application/json" localhost:8085/allocations/ -d"{\"projectId\": \"1\", \"userId\": \"1\", \"firstDay\": \"2015-05-17\", \"lastDay\": \"2015-05-18\"}"
+
+gradle applications:registration-server:bootRun
+gradle applications:backlog-server:bootRun
+gradle applications:allocations-server:bootRun
+gradle applications:timesheets-server:bootRun
+gradle platform-services:eureka-server:bootRun
+
+{
+    "binding_name": null,
+    "credentials": {
+     "auth_domain": "https://login.system.dev.pcf-aws.com",
+     "client_id": "8e836169-4d01-427f-8761-55bcd04a0a2a",
+     "client_secret": "d09b53bc-cbdc-4d7e-8401-5614e031c8f2"
+    }
+
+curl -k "https://login.system.dev.pcf-aws.com/oauth/token" -i -u "8e836169-4d01-427f-8761-55bcd04a0a2a:d09b53bc-cbdc-4d7e-8401-5614e031c8f2" -X POST -H 'Accept: application/json' -H 'Content-Type: application/x-www-form-urlencoded' -d 'grant_type=client_credentials&response_type=token'
+
+eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vdWFhLnN5c3RlbS5kZXYucGNmLWF3cy5jb20vdG9rZW5fa2V5cyIsImtpZCI6ImtleS0xIiwidHlwIjoiSldUIn0.eyJqdGkiOiI2NDRjNmI3ZmNkMzA0MWZjYWYyYWYzMGMzNGIxY2MwNSIsInN1YiI6IjhlODM2MTY5LTRkMDEtNDI3Zi04NzYxLTU1YmNkMDRhMGEyYSIsImF1dGhvcml0aWVzIjpbInVhYS5yZXNvdXJjZSJdLCJzY29wZSI6WyJ1YWEucmVzb3VyY2UiXSwiY2xpZW50X2lkIjoiOGU4MzYxNjktNGQwMS00MjdmLTg3NjEtNTViY2QwNGEwYTJhIiwiY2lkIjoiOGU4MzYxNjktNGQwMS00MjdmLTg3NjEtNTViY2QwNGEwYTJhIiwiYXpwIjoiOGU4MzYxNjktNGQwMS00MjdmLTg3NjEtNTViY2QwNGEwYTJhIiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJkYWYyNDJlIiwiaWF0IjoxNTU2NjIxMzc4LCJleHAiOjE1NTY2NjQ1NzgsImlzcyI6Imh0dHBzOi8vdWFhLnN5c3RlbS5kZXYucGNmLWF3cy5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsidWFhIiwiOGU4MzYxNjktNGQwMS00MjdmLTg3NjEtNTViY2QwNGEwYTJhIl19.ABomgFlBG19lH6kbmxLL8-mRxgzWOipK6eVrPtM9yf82u7v8k51FtlMXykqOkM0j7R7ItPYAdmRiqkmsGnwL4P3Sf_ARr2NURyPIPaiIgF5q07PYnSe1bwQupNM_Uqv7KEtcE1hwNFA84OQsFU6I0EIlD-W8qH2NeJFCsKJTBXQFpzBW6_0Lc8EFtRha-88D42dZmsQjfguhp8mR9JlDN3Hscu0iNjf22MMj1M21JUzuBZ8uud5UGUXi0EVoNwfQAKN6YYXMcK7MjCyJal1HsBKGQqtHaONrBHMl8VVGnqMAS1pLukTQSGwpP35X3wIAO-qjLqJPFmrS_BodK2oH0A
+
+curl https://allocations-pal-debajyoti.apps.dev.pcf-aws.com -H"Authorization: Bearer eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vdWFhLnN5c3RlbS5kZXYucGNmLWF3cy5jb20vdG9rZW5fa2V5cyIsImtpZCI6ImtleS0xIiwidHlwIjoiSldUIn0.eyJqdGkiOiI2NDRjNmI3ZmNkMzA0MWZjYWYyYWYzMGMzNGIxY2MwNSIsInN1YiI6IjhlODM2MTY5LTRkMDEtNDI3Zi04NzYxLTU1YmNkMDRhMGEyYSIsImF1dGhvcml0aWVzIjpbInVhYS5yZXNvdXJjZSJdLCJzY29wZSI6WyJ1YWEucmVzb3VyY2UiXSwiY2xpZW50X2lkIjoiOGU4MzYxNjktNGQwMS00MjdmLTg3NjEtNTViY2QwNGEwYTJhIiwiY2lkIjoiOGU4MzYxNjktNGQwMS00MjdmLTg3NjEtNTViY2QwNGEwYTJhIiwiYXpwIjoiOGU4MzYxNjktNGQwMS00MjdmLTg3NjEtNTViY2QwNGEwYTJhIiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJkYWYyNDJlIiwiaWF0IjoxNTU2NjIxMzc4LCJleHAiOjE1NTY2NjQ1NzgsImlzcyI6Imh0dHBzOi8vdWFhLnN5c3RlbS5kZXYucGNmLWF3cy5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsidWFhIiwiOGU4MzYxNjktNGQwMS00MjdmLTg3NjEtNTViY2QwNGEwYTJhIl19.ABomgFlBG19lH6kbmxLL8-mRxgzWOipK6eVrPtM9yf82u7v8k51FtlMXykqOkM0j7R7ItPYAdmRiqkmsGnwL4P3Sf_ARr2NURyPIPaiIgF5q07PYnSe1bwQupNM_Uqv7KEtcE1hwNFA84OQsFU6I0EIlD-W8qH2NeJFCsKJTBXQFpzBW6_0Lc8EFtRha-88D42dZmsQjfguhp8mR9JlDN3Hscu0iNjf22MMj1M21JUzuBZ8uud5UGUXi0EVoNwfQAKN6YYXMcK7MjCyJal1HsBKGQqtHaONrBHMl8VVGnqMAS1pLukTQSGwpP35X3wIAO-qjLqJPFmrS_BodK2oH0A"
+
+
+
+
+gradle cloudNativeDeveloperDistributedSystemWithSecurity \
+    -PuaaUrl=https://login.system.dev.pcf-aws.com/oauth/token \
+    -PclientId=8e836169-4d01-427f-8761-55bcd04a0a2a \
+    -PclientSecret=d09b53bc-cbdc-4d7e-8401-5614e031c8f2 \
+    -PregistrationServerUrl=https://registration-pal-debajyoti.apps.dev.pcf-aws.com \
+    -PbacklogServerUrl=https://backlog-pal-debajyoti.apps.dev.pcf-aws.com \
+    -PallocationsServerUrl=https://allocations-pal-debajyoti.apps.dev.pcf-aws.com \
+    -PtimesheetsServerUrl=https://timesheets-pal-debajyoti.apps.dev.pcf-aws.com
+	
+	
+cf bind-service tracker-allocations-debajyoti tracker-config-server-debajyoti
+cf bind-service tracker-backlog-debajyoti tracker-config-server-debajyoti
+cf bind-service tracker-registration-debajyoti tracker-config-server-debajyoti
+cf bind-service tracker-timesheets-debajyoti tracker-config-server-debajyoti
+
+cf push -f manifest-allocations.yml
+cf push -f manifest-backlog.yml
+cf push -f manifest-registration.yml
+cf push -f manifest-timesheets.yml
+
+	
+mkdir ~/workspace/tracker-config
+cd ~/workspace/tracker-config
+git init
+git remote add origin git@github.com:DebTheDeveloper/tracker-config.git	
+
+
+cf create-service p-config-server standard tracker-config-server-debajyoti \
+-c "{\"git\": {\"uri\": \"https://github.com/DebTheDeveloper/tracker-config.git\", \"label\": \"master\"}}"
+
+p-config-server               standard                                 Config Server for Spring Cloud Applications                                                                p-spring-cloud-services
+
+
+gradle cloudNativeDeveloperDatabaseAccess -PserverUrl=https://pal-tracker123-timely-koala.cfapps.io
+													https://pal-tracker123-timely-koala.cfapps.io/
+													
+											curl -i -XPOST -H"Content-Type: application/json" localhost:8080/time-entries -d"{\"projectId\": 1, \"userId\": 2, \"date\": \"2019-01-01\", \"hours\": 8}"
+											curl -i -XPOST -H"Content-Type: application/json" localhost:8080/time-entries -d"{\"projectId\": 11, \"userId\": 21, \"date\": \"2019-01-11\", \"hours\": 1}"
+											curl -i -XPOST -H"Content-Type: application/json" localhost:8080/time-entries -d"{\"projectId\": 12, \"userId\": 22, \"date\": \"2019-01-12\", \"hours\": 2}"
+											curl -i -XPOST -H"Content-Type: application/json" localhost:8080/time-entries -d"{\"projectId\": 13, \"userId\": 23, \"date\": \"2019-01-13\", \"hours\": 3}"
+											curl -i -XPOST -H"Content-Type: application/json" localhost:8080/time-entries -d"{\"projectId\": 14, \"userId\": 24, \"date\": \"2019-01-14\", \"hours\": 8}"
+
+
+Users
+
+curl -i -XPOST -H"Content-Type: application/json" localhost:8083/registration -d"{\"name\": \"Pete\"}"
+curl -i localhost:8083/users/${USER_ID}
+
+Accounts
+
+curl -i localhost:8083/accounts?ownerId=${USER_ID}
+
+Projects
+
+curl -i -XPOST -H"Content-Type: application/json" localhost:8083/projects -d"{\"name\": \"Basket Weaving\", \"accountId\": ${ACCOUNT_ID}}"
+curl -i localhost:8083/projects?accountId=${ACCOUNT_ID}
+
+Allocations
+
+curl -i -XPOST -H"Content-Type: application/json" localhost:8085/allocations -d"{\"projectId\": ${PROJECT_ID}, \"userId\": ${USER_ID}, \"firstDay\": \"2015-05-17\", \"lastDay\": \"2015-05-18\"}"
+curl -i localhost:8085/allocations?projectId=${PROJECT_ID}
+
+Stories
+
+curl -i -XPOST -H"Content-Type: application/json" localhost:8082/stories -d"{\"projectId\": ${PROJECT_ID}, \"name\": \"Find some reeds\"}"
+curl -i localhost:8082/stories?projectId=${PROJECT_ID}
+
+Time Entries
+
+curl -i -XPOST -H"Content-Type: application/json" localhost:8084/time-entries/ -d"{\"projectId\": ${PROJECT_ID}, \"userId\": ${USER_ID}, \"date\": \"2015-05-17\", \"hours\": 6}"
+curl -i localhost:8084/time-entries?userId=${USER_ID}
+
+2.0.7-build.5
